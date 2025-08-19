@@ -18,7 +18,4 @@ It allows employees to send badges, earn points, redeem rewards, and track leade
 - API, UI, and DB test automation
 
 ## Getting Started
-```bash
-git clone https://github.com/yourusername/wespark.git
-cd wespark
-mvn clean install
+
