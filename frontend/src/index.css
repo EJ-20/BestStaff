@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* small utility aliases for nicer markup */
+.input {
+  @apply w-full rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm
+         outline-none focus:border-blue-500;
+}
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold
+         text-white hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50;
+}
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white px-3 py-2 text-sm
+         hover:bg-neutral-100;
+}
