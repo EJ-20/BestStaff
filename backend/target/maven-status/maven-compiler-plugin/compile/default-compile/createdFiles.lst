@@ -1,0 +1,15 @@
+com\beststaff\controller\BadgeController.class
+com\beststaff\config\CorsConfig$1.class
+com\beststaff\dto\RecognitionRequest.class
+com\beststaff\controller\LeaderboardController.class
+com\beststaff\controller\AuthController.class
+com\beststaff\controller\RecognitionController.class
+com\beststaff\model\Badge.class
+com\beststaff\BestStaffApp.class
+com\beststaff\config\CorsConfig.class
+com\beststaff\repository\BadgeRepository.class
+com\beststaff\repository\EmployeeRepository.class
+com\beststaff\controller\EmployeeController.class
+com\beststaff\repository\RecognitionRepository.class
+com\beststaff\model\Recognition.class
+com\beststaff\model\Employee.class
