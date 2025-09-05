@@ -11,7 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/recognitions")
+@RequestMapping("/api/recognitions")
+@CrossOrigin(origins = "http://localhost:5173")
 public class RecognitionController {
 
   private final RecognitionRepository recRepo;

@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/leaderboard")
+@RequestMapping("/api/leaderboard")
+@CrossOrigin(origins = "http://localhost:5173")
 public class LeaderboardController {
   private final EmployeeRepository repo;
   public LeaderboardController(EmployeeRepository repo) { this.repo = repo; }

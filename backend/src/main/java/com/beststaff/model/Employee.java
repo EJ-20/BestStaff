@@ -38,4 +38,6 @@ public class Employee {
 
     public int getPoints() { return points; }
     public void setPoints(int points) { this.points = points; }
+
+    public Long getId() { return employeeId; }
 }

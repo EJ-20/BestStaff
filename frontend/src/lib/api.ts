@@ -1,19 +1,16 @@
-const BASE_URL = import.meta.env.VITE_API_URL as string;
-
-async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const res = await fetch(`${BASE_URL}${path}`, {
-    headers: { 'Content-Type': 'application/json' },
-    ...options,
-  });
-  if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    throw new Error(`${res.status} ${res.statusText} ${text}`);
-  }
-  return res.json() as Promise<T>;
-}
-
 export const api = {
-  get:  <T>(path: string) => request<T>(path),
-  post: <T>(path: string, body: unknown) =>
-    request<T>(path, { method: 'POST', body: JSON.stringify(body) }),
+  async get<T>(url: string): Promise<T> {
+    const res = await fetch(`http://localhost:8080${url}`);
+    if (!res.ok) throw new Error(await res.text());
+    return res.json(); // 💥 this line fails if backend doesn't send JSON
+  },
+  async post<T>(url: string, body: any): Promise<T> {
+    const res = await fetch(`http://localhost:8080${url}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    return res.json(); // same here
+  },
 };

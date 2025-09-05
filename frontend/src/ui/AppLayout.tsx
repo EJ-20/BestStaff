@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { UserCircle2, Gift, Medal, Trophy, Settings } from "lucide-react";
 
 export default function AppLayout() {
@@ -67,7 +67,7 @@ function Topbar() {
   return (
     <div className="sticky top-0 z-10 bg-neutral-50/80 backdrop-blur border-b border-neutral-200">
       <div className="flex items-center justify-between px-5 py-3">
-        <div className="text-sm text-neutral-600">Build · Test · Reward</div>
+        <div className="text-sm text-neutral-600"></div>
         <BudgetPill />
       </div>
     </div>
